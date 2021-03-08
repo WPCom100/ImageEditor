@@ -40,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //take image from SourceImage, give it inverted colors and then display in ResultImage
         let image = CIImage(image: SourceImage.image!)
         
-        let filter = CIFilter(name: "Invert", parameters: [
+        let filter = CIFilter(name: "CIColorInvert", parameters: [
             
             "inputImage": image!
         ])
