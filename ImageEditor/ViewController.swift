@@ -36,10 +36,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    @IBAction func InvertButoon(_ sender: UIButton) {
-        //take image from SourceImage, give it nverted colors and then display in ResultImage
-
+    @IBAction func InvertButton(_ sender: UIButton) {
+        //take image from SourceImage, give it inverted colors and then display in ResultImage
+        let image = CIImage(image: SourceImage.image!)
         
+        let filter = CIFilter(name: "Invert", parameters: [
+            
+            "inputImage": image!
+        ])
+        let outputImage = filter?.outputImage
+        ResultImage.image = UIImage(ciImage: outputImage!)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
