@@ -27,6 +27,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func GreyScaleButton(_ sender: UIButton) {
         //take image from SourceImage, make it Grayscale and then display in ResultImage
+        let image = CIImage(image: SourceImage.image!)
+        
+        let filter = CIFilter(name: "CIColorMonochrome", parameters: [
+            
+            "inputColor": CIColor.gray,
+            "inputImage": image!,
+            
+            "inputIntensity": 1.0
+        ])
+        let outputImage = filter?.outputImage
+        ResultImage.image = UIImage(ciImage: outputImage!)
+
         
     }
     
