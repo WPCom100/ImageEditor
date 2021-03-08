@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +47,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Invert"/>
                                         <connections>
-                                            <action selector="InvertButoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rH-Z5-UbO"/>
+                                            <action selector="InvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujh-sr-Liu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -86,7 +86,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ResultImage" destination="dy1-Iv-Nxf" id="w8R-Fj-GCN"/>
+                        <outlet property="ResultImage" destination="dy1-Iv-Nxf" id="mT0-ek-sx6"/>
                         <outlet property="SourceImage" destination="Ryj-o9-dEZ" id="XEL-hU-T8e"/>
                     </connections>
                 </viewController>
@@ -96,7 +96,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo" catalog="system" width="32" height="32"/>
         <image name="square.dashed" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

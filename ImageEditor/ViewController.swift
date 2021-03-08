@@ -32,7 +32,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func SepiaButton(_ sender: UIButton) {
         //take image from SourceImage, make it Sepia and then display in ResultImage
-
+        let image = CIImage(image: SourceImage.image!)
+        
+        let filter = CIFilter(name: "CISepiaTone", parameters: [
+            
+            "inputImage": image!,
+            
+            "inputIntensity": 0.6
+        ])
+        let outputImage = filter?.outputImage
+        ResultImage.image = UIImage(ciImage: outputImage!)
         
     }
     
