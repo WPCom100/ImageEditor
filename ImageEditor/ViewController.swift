@@ -24,6 +24,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(photoChoice, animated: true, completion: nil)
     }
     
+    @IBAction func InfoButton(_ sender: UIButton) {
+        //will show an alert with info on how to use the app.
+        
+        let alert = UIAlertController(title: "Tutorial", message: "To begin, tap the small image button and select a photo. Then choose any of the three filters. Have fun!", preferredStyle: .alert)
+        
+        
+        let OKButton = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(OKButton)
+        
+        present(alert, animated: true, completion: nil)
+
+    }
     
     @IBAction func GreyScaleButton(_ sender: UIButton) {
         //take image from SourceImage, make it Grayscale and then display in ResultImage
